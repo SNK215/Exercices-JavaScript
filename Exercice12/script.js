@@ -9,4 +9,4 @@ while (habitantsTourcoing < 120000) {
 
 }
 
-alert(`Toucoing aura plus de 120000 habitants dans ${annee} ans. (${Math.round(habitantsTourcoing)} habitants cette année là)`)
+alert(`Tourcoing aura plus de 120000 habitants dans ${annee} ans. (${Math.round(habitantsTourcoing)} habitants cette année là)`)
