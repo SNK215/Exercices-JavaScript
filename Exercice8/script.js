@@ -1,22 +1,14 @@
-let email = "contact@teamjs.fr";
-let mdp = "leLundiAuSoleil";
+let wordInput = prompt("Entrez un mot: ");
+let wordReverse = wordInput.split("").reverse().join("");
 
-let inputEmail = prompt("Entrez votre adresse mail: ");
+if (wordInput == wordReverse) {
 
-if (email == inputEmail) {
+    alert(`Le mot "${wordInput}" est un palindrome ! `)
 
-    let inputMdp = prompt("Entrez votre mot de passe: ");
-    if (mdp == inputMdp) {
-
-        alert("Bienvenue sur votre page d'accueil ! :)");
-
-    } else {
-
-        alert("Mot de passe erronné !");
-
-    }
 } else {
 
-    alert("Email erronné !");
+    alert(`Le mot "${wordInput}" n'est PAS un palindrome ! `)
 
-};
+}
+
+
