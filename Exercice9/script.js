@@ -1,22 +1,39 @@
-let email = "contact@teamjs.fr";
-let mdp = "leLundiAuSoleil";
+let age = parseInt(prompt("Entrez l'âge du salarié: "));
+let anciennete = parseInt(prompt("Entrez l'ancienneté du salarié: "));
+let dernierSalaire = parseInt(prompt("Entrez le dernier salaire du salarié: ")); 
 
-let inputEmail = prompt("Entrez votre adresse mail: ");
+if (anciennete <= 10) {
 
-if (email == inputEmail) {
+    console.log("Le salarié touche une indémnité équivalente à la moitié d'un salaire");
+    if (age > 45) {
+    
+        if (age >= 46 && age <= 49) {
+            
+            console.log("Le salarié touche une indémnité supplémentaire équivalente à 2 mois de salaire");
+    
+        } if (age >= 50) {
+            
+            console.log("Le salarié touche une indémnité supplémentaire équivalente à 5 mois de salaire");
+    
+        }
+    
+    } 
 
-    let inputMdp = prompt("Entrez votre mot de passe: ");
-    if (mdp == inputMdp) {
+} if (anciennete > 10) {
 
-        alert("Bienvenue sur votre page d'accueil ! :)");
+        console.log("Le salarié touche une indémnité équivalente à un salaire");
+        if (age > 45) {
+    
+            if (age >= 46 && age <= 49) {
+                
+                console.log("Le salarié touche une indémnité supplémentaire équivalente à 2 mois de salaire");
+        
+            } if (age >= 50) {
+                
+                console.log("Le salarié touche une indémnité supplémentaire équivalente à 5 mois de salaire");
+        
+            }
+        
+        } 
 
-    } else {
-
-        alert("Mot de passe erronné !");
-
-    }
-} else {
-
-    alert("Email erronné !");
-
-};
+} 
