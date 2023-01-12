@@ -7,10 +7,6 @@ let moyenneNote = 0;
 for (let index = 0; index < nombreNotes; index++) {
 
     notes[index] = Number(prompt("Entrez une note"));
-    
-}
-
-for (let index = 0; index < notes.length; index++) {
 
     if (notes[index] > meilleureNote) {
 
@@ -23,7 +19,7 @@ for (let index = 0; index < notes.length; index++) {
     }
 
     moyenneNote += notes[index];
-
+    
 }
 
 moyenneNote = moyenneNote / notes.length;
