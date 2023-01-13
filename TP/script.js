@@ -28,6 +28,18 @@ function ajoutContact(nomInput,prenomInput,ageInput) {
 
 } 
 
+function listeContact() {
+
+    let message = "";
+            for (let index = 0; index < annuaire.length; index++) {
+                
+                message += `${index+1}) ${annuaire[index].nom} ${annuaire[index].prenom}, ${annuaire[index].age} ans\n`
+                
+            }
+    return message;
+
+}
+
 let running = true;
 while (running) {
 
@@ -36,9 +48,9 @@ while (running) {
     switch (choix) {
         case 1:
 
-            alert("")
             console.table(annuaire);
-            
+            alert("Contacts:\n" + listeContact());
+
             break;
 
         case 2:
@@ -53,12 +65,9 @@ while (running) {
 
         case 3:
 
-            let contactDelete = Number(prompt("Veuillez choisir le contact à supprimer"));
-            for (const element of annuaire) {
-
-                alert(`${element.nom}`)
-
-            }
+            let contactDelete = Number(prompt("Veuillez choisir le contact à supprimer\n" + listeContact()));
+            annuaire.splice(contactDelete - 1, 1);
+            alert("Contact supprimé !")
 
             break;
     
