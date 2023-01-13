@@ -31,11 +31,11 @@ function ajoutContact(nomInput,prenomInput,ageInput) {
 function listeContact() {
 
     let message = "";
-            for (let index = 0; index < annuaire.length; index++) {
-                
-                message += `${index+1}) ${annuaire[index].nom} ${annuaire[index].prenom}, ${annuaire[index].age} ans\n`
-                
-            }
+    for (let index = 0; index < annuaire.length; index++) {
+    
+        message += `${index+1}) ${annuaire[index].nom} ${annuaire[index].prenom}, ${annuaire[index].age} ans\n`
+
+            }        
     return message;
 
 }
