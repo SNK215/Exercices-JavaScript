@@ -39,17 +39,17 @@ let total = 0;
 let nbNotes = 0;
 for (let i = 0; i < etudiants.length; i++) {
 
-   for (let key in etudiants[i].matieres) {
-    
-    total += etudiants[i].matieres[key];
-    nbNotes++
+    for (let key in etudiants[i].matieres) {
 
-   }
-    
+        total += etudiants[i].matieres[key];
+        nbNotes++;
+
+    }
+
 }
 
 let moyenne = total / nbNotes;
-console.log(moyenne);
+console.log("La moyenne des étudiants est: ", moyenne);
 
 
 
