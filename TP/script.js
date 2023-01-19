@@ -35,7 +35,7 @@ function listeContact() {
     
         message += `${index+1}) ${annuaire[index].nom} ${annuaire[index].prenom}, ${annuaire[index].age} ans\n`
 
-            }        
+    }        
     return message;
 
 }
