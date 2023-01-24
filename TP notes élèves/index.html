@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>TP notes élèves</title>
+</head>
+<body onload="loadList()">
+    <div id="mainWindow">
+        <h1 class="display-6">- Liste de notes -</h1>
+        <hr>
+        <div id="firstPanel">
+            <div>
+                <h5 class="display-6">Ajouter un élève <button type="button" id="addStudent" class="btn btn-outline-light">ON</button></h5>
+                <hr>
+                <div id="divAddStudent" hidden>
+                    <form id="formStudent" class="d-flex flex-column">
+                        <span>Nom :</span>
+                        <input type="text" id="nom"/>
+                        <span>Prénom :</span>
+                        <input type="text" id="prenom"/>  
+                        <button id="valider" onclick="fAddStudent()" >Ajouter</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <h5 class="display-6">Ajouter une matière <button type="button" id="addSubject" class="btn btn-outline-light">ON</button></h5>
+                <hr>
+                <div id="divAddSubject" hidden>
+                    <form id="formSubject" class="d-flex flex-column">
+                        <span>Matière :</span>
+                        <input type="text" id="subject"/> 
+                        <button id="valider" onclick="fAddSubject()" >Ajouter</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <h5 class="display-6">Ajouter une note <button type="button" id="addGrade" class="btn btn-outline-light">ON</button></h5>
+                <hr>
+                <div id="divAddGrade" hidden>
+                    <form id="formGrade" class="d-flex flex-column">
+                        <span>Elève : </span>
+                        <select name="selectGradeStudent" id="selectGradeStudent">
+                            <option value="">Choisissez un élève</option>
+                        </select>
+                        <span>Note : </span>
+                        <input type="text" id="selectGradeGrade"/> 
+                        <span>Matière : </span>
+                        <select name="selectGradeSubject" id="selectGradeSubject">
+                            <option value="">Choisissez une matière</option>
+                        </select>
+                        <button id="valider" onclick="fAddGrade()">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h5 class="display-6">Sélection</h5>
+        <hr>
+        <div id="secondPanel">
+            <div id="student">
+                <span>Elève : </span>
+                <select name="selectStudent" id="selectStudent">
+                </select>
+            </div>
+            <div id="subject">
+                <span>Matière : </span>
+                <select name="selectSubject" id="selectSubject">
+                </select>
+            </div>
+        </div>
+        <span id="affichageMoyenne"></span>
+        <h5 class="display-6">Notes</h5>
+        <hr>
+        <div id="tableau">
+        </div>
+        
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

@@ -6,7 +6,7 @@ function afficher(val)
 function calculer() 
         { 
             let operation = document.getElementById("ecran").innerText;
-            let resultat = eval(operation) ;
+            let resultat = eval(operation);
             document.getElementById("ecran").innerText = resultat; 
         } 
 
@@ -23,5 +23,4 @@ document.addEventListener("keydown", (e) => {
         document.getElementById("ecran").innerText+=e.key;
     }
     console.log(e.key)
-
 })
