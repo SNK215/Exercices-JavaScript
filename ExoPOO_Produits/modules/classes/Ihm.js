@@ -30,30 +30,28 @@ export class Ihm {
             let domaine = document.querySelector("input[name='domaine']").value;
             let service = new Service(titre, prix, description, domaine)
             this.services.push(service);
-            this.afficher2(service)
+            this.afficher(service)
         }
         
     }
 
     afficher(c){
-        // Ajouter un contact à l'affichage HTML
-        this.tableauHtmlResultat.innerHTML += `<tr>
-        <td>${c.titre}</td>
-        <td>${c.prix}</td>
-        <td>${c.description}</td>
-        <td>${c.stock}</td>
-        </tr>
-        `
-    }
-
-    afficher2(c){
-        // Ajouter un contact à l'affichage HTML
-        this.tableauHtmlResultat.innerHTML += `<tr>
-        <td>${c.titre}</td>
-        <td>${c.prix}</td>
-        <td>${c.description}</td>
-        <td>${c.domaine}</td>
-        </tr>
-        `
+        if (document.querySelector("input[name='stock']")) {
+            this.tableauHtmlResultat.innerHTML += `<tr>
+            <td>${c.titre}</td>
+            <td>${c.prix}</td>
+            <td>${c.description}</td>
+            <td>${c.stock}</td>
+            </tr>
+            `
+        } if (document.querySelector("input[name='domaine']")) {
+            this.tableauHtmlResultat2.innerHTML += `<tr>
+            <td>${c.titre}</td>
+            <td>${c.prix}</td>
+            <td>${c.description}</td>
+            <td>${c.domaine}</td>
+            </tr>
+            `
+        }
     }
 }
